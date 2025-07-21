@@ -23,12 +23,11 @@ const App = () => {
     <div className="flex flex-col justify-center">
       <ul className="pt-20 pb-5 mx-auto ">
         {users.map(item => (
-          <li className="text-[18px] font-medium " onClick={() => setUserId(item.id)}  key={item.id}>{item.name} id: {item.id} age: {item.age} </li>
+          <li className="text-[18px] font-medium text-white " onClick={() => setUserId(item.id)}  key={item.id}>name: {item.name}   id: {item.id}   age: {item.age} </li>
         ))}
       </ul>
-        <hr />
         <ul className="py-5 mx-auto text-center">
-          {street.filter(item => item.userId == userId).map(item => <p className=" text-[18px] font-normal " key={item.id}>Country: {item.name}</p>)}
+          {street.filter(item => item.userId == userId).map(item => <p className=" text-red-800 text-[18px] font-normal " key={item.id}>Country: {item.name}</p>)}
         </ul>
 
     </div>
